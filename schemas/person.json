@@ -1,14 +1,10 @@
 {
+	"id": "https://cdn.brytecore.com/packages/schemas/person.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Person",
-	"description": "Person",
-	"definitions": {
-		"person": {
-			"type": "object",
-			"properties": {
-				"firstName": {"type": "string"},
-				"lastName": {"type": "string"}
-			}
-		}
+	"description": "A human being",
+	"type": "object",
+	"properties": {
+		"firstName": {"type": "string"},
+		"lastName": {"type": "string"}
 	}
 }

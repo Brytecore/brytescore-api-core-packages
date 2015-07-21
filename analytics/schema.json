@@ -1,8 +1,7 @@
 {
+	"id": "https://cdn.brytecore.com/packages/analytics/schema.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Brytescore Analytics",
-	"description": "Brytescore Analytics Events",
-
+	"description": "The Brytescore API package to track website and mobile app analytics events",
 	"definitions": {
 		"heartBeat": {
 
@@ -20,7 +19,11 @@
 
 		},
 		"authenticated": {
-
+			"description": "User authenticated against the system",
+			"type": "object",
+			"properties": {
+				"account": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json" }
+			}
 		},
 		"updatedUserInfo": {
 

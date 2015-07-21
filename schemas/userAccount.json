@@ -1,0 +1,15 @@
+{
+	"id": "https://cdn.brytecore.com/packages/schemas/userAccount.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "An authenticated user account of the website or application",
+	"type": "object",
+	"allOf": [
+		{ "$ref": "https://cdn.brytecore.com/packages/schemas/person.json" },
+		{
+			"properties": {
+				"userId": { "type": "string" },
+				"emailAddress": { "type": "string", "format": "email" }
+			}
+		}
+	]
+}
