@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Brytescore Analytics",
+	"description": "Brytescore Analytics Events",
+
+	"definitions": {
+		"heartBeat": {
+
+		},
+		"pageView": {
+
+		},
+		"sessionStarted": {
+
+		},
+		"brytescoreUUIDCreated": {
+
+		},
+		"submittedForm": {
+
+		},
+		"authenticated": {
+
+		},
+		"updatedUserInfo": {
+
+		},
+		"registeredAccount": {
+
+		}
+	}
+}
