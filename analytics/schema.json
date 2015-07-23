@@ -147,7 +147,13 @@
 				{ "$ref": "#/definitions/eventProperties" },
 				{
 					"properties": {
-						"event": { "enum": [ "submittedForm" ] }
+						"event": { "enum": [ "submittedForm" ] },
+						"data": {
+							"type": "object",
+							"properties": {
+								"form": { "$ref": "https://cdn.brytecore.com/packages/schemas/form.json#" }
+							}
+						}
 					}
 				}
 			]
