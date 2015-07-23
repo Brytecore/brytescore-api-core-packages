@@ -7,19 +7,19 @@
 			"type": "object",
 			"properties": {
 				"anonymousId": { "type": "string" },
-				"apiKey":      { "type": "string" },
-				"data":        {
+				"apiKey": { "type": "string" },
+				"data": {
 					"type": "object",
 					"properties": {
 						"custom": { "type": "object" }
 					},
 					"additionalProperties": true
 				},
-				"event":       { "type": "string" },
-				"hostName":    { "type": "string" },
-				"pageViewId":  { "type": "string" },
-				"sessionId":   { "type": "string" },
-				"userId":      { "type": "string" }
+				"event": { "type": "string" },
+				"hostName": { "type": "string", "format": "hostname" },
+				"pageViewId": { "type": "string" },
+				"sessionId": { "type": "string" },
+				"userId": { "type": "string" }
 			},
 			"required": [ "anonymousId", "apiKey", "data", "event" ],
 			"additionalProperties": false
@@ -36,8 +36,12 @@
 						"data":  {
 							"type": "object",
 							"properties": {
-								"account":            { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json" },
-								"userClassification": { "type": "string" }
+								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
+								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+								"isLead": { "type": "boolean" },
+								"userClassification": { "type": "string" },
+								"dateRegistered": { "type": "string", "format": "date-time" }
 							}
 						}
 					}
@@ -100,7 +104,18 @@
 				{ "$ref": "#/definitions/eventProperties" },
 				{
 					"properties": {
-						"event": { "enum": [ "registeredAccount" ] }
+						"event": { "enum": [ "registeredAccount" ] },
+						"data": {
+							"type": "object",
+							"properties": {
+								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
+								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+								"isLead": { "type": "boolean" },
+								"userClassification": { "type": "string" },
+								"dateRegistered": { "type": "string", "format": "date-time" }
+							}
+						}
 					}
 				}
 			]
@@ -144,7 +159,15 @@
 				{ "$ref": "#/definitions/eventProperties" },
 				{
 					"properties": {
-						"event": { "enum": [ "updatedUserInfo" ] }
+						"event": { "enum": [ "updatedUserInfo" ] },
+						"data": {
+							"type": "object",
+							"properties": {
+								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
+								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" }
+							}
+						}
 					}
 				}
 			]

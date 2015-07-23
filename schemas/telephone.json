@@ -1,0 +1,13 @@
+{
+	"id": "https://cdn.brytecore.com/packages/schemas/telephone.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "A set of telephone numbers",
+	"type": "object",
+	"properties": {
+		"mobile": { "type": "string" },
+		"work": { "type": "string" },
+		"home": { "type": "string" },
+		"fax": { "type": "string" },
+		"direct": { "type": "string" }
+	}
+}
