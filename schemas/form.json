@@ -1,0 +1,16 @@
+{
+	"id": "https://cdn.brytecore.com/packages/schemas/form.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"description": "A user-submitted data entry form",
+	"type": "object",
+	"properties": {
+		"fromEmail": { "type": "string", "format": "email" },
+		"fromName": { "type": "string" },
+		"fromTelephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+		"message": { "type": "string" },
+		"name": { "type": "string" },
+		"subject": { "type": "string" },
+		"toEmail":   { "type": "string", "format": "email" },
+		"toName": { "type": "string" }
+	}
+}
