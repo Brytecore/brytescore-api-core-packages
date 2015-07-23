@@ -90,7 +90,7 @@
 							"properties": {
 								"referrer":  { "type": "string" },
 								"pageTitle": { "type": "string" },
-								"pageUrl":   { "type": "string", "format": "uri" }
+								"pageURL":   { "type": "string", "format": "uri" }
 							}
 						}
 					}
