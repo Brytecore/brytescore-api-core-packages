@@ -74,8 +74,13 @@
 				{ "$ref": "#/definitions/eventProperties" },
 				{
 					"properties": {
-						"event":       { "enum": [ "heartBeat" ] },
-						"elapsedTime": { "type": "number" }
+						"event": { "enum": [ "heartBeat" ] },
+						"data":  {
+							"type": "object",
+							"properties": {
+								"elapsedTime": { "type": "number" }
+							}
+						}
 					}
 				}
 			]
