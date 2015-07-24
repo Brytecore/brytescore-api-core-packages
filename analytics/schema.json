@@ -17,7 +17,7 @@
 				},
 				"event": { "type": "string" },
 				"hostName": { "type": "string", "format": "hostname" },
-				"library": { "type": "string" }, // Javascript, PHP etc
+				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
 				"schemaVersion": { "type": "string" },
