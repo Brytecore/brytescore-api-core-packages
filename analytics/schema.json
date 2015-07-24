@@ -24,7 +24,7 @@
 				"sessionId": { "type": "string" },
 				"userId": { "type": "string" }
 			},
-			"required": [ "anonymousId", "apiKey", "data", "event", "schemaVersion" ],
+			"required": [ "anonymousId", "apiKey", "data", "event", "library", "libraryVersion", "schemaVersion" ],
 			"additionalProperties": false
 		},
 
