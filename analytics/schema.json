@@ -16,6 +16,7 @@
 					"additionalProperties": true
 				},
 				"event": { "type": "string" },
+				"eventDisplayName": { "type": "string" },
 				"hostName": { "type": "string", "format": "hostname" },
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
