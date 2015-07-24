@@ -7,7 +7,7 @@
 		{ "$ref": "https://cdn.brytecore.com/packages/schemas/person.json#" },
 		{
 			"properties": {
-				"userId": { "type": "string" },
+				"id": { "type": "string" },
 				"emailAddress": { "type": "string", "format": "email" }
 			}
 		}
