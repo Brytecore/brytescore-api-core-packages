@@ -17,11 +17,14 @@
 				},
 				"event": { "type": "string" },
 				"hostName": { "type": "string", "format": "hostname" },
+				"library": { "type": "string" }, // Javascript, PHP etc
+				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
+				"schemaVersion": { "type": "string" },
 				"sessionId": { "type": "string" },
 				"userId": { "type": "string" }
 			},
-			"required": [ "anonymousId", "apiKey", "data", "event" ],
+			"required": [ "anonymousId", "apiKey", "data", "event", "schemaVersion" ],
 			"additionalProperties": false
 		},
 
