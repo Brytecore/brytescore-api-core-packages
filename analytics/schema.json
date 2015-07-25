@@ -16,14 +16,14 @@
 					"additionalProperties": true
 				},
 				"event": { "type": "string" },
-				"eventDisplayName": { "type": "string" },
-				"hostName": { "type": "string", "format": "hostname" },
+				"eventDisplayName": { "type": [ "string", "null" ] },
+				"hostName": { "type": [ "string", "null" ], "format": "hostname" },
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
 				"schemaVersion": { "type": "string" },
 				"sessionId": { "type": "string" },
-				"userId": { "type": "string" }
+				"userId": { "type": [ "string", "null" ] }
 			},
 			"required": [ "anonymousId", "apiKey", "data", "event", "library", "libraryVersion", "schemaVersion" ],
 			"additionalProperties": false
@@ -40,12 +40,27 @@
 						"data":  {
 							"type": "object",
 							"properties": {
-								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
-								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
-								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+								"userAccount": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
+										{ "type": "null" }
+									]
+								},
+								"address": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+										{ "type": "null" }
+									]
+								},
+								"telephone": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+										{ "type": "null" }
+									]
+								},
 								"isLead": { "type": "boolean" },
-								"userClassification": { "type": "string" },
-								"dateRegistered": { "type": "string", "format": "date-time" }
+								"userClassification": { "type": [ "string", "null" ] },
+								"dateRegistered": { "type": [ "string", "null" ], "format": "date-time" }
 							}
 						}
 					}
@@ -64,7 +79,8 @@
 							"type": "object",
 							"anonymousId": { "type": "string" }
 						}
-					}
+					},
+					"required": [ "anonymousId" ]
 				}
 			]
 		},
@@ -97,9 +113,9 @@
 						"data": {
 							"type": "object",
 							"properties": {
-								"referrer":  { "type": "string" },
-								"pageTitle": { "type": "string" },
-								"pageURL":   { "type": "string", "format": "uri" }
+								"referrer":  { "type": [ "string", "null" ] },
+								"pageTitle": { "type": [ "string", "null" ] },
+								"pageURL":   { "type": [ "string", "null" ], "format": "uri" }
 							}
 						}
 					}
@@ -117,12 +133,27 @@
 						"data": {
 							"type": "object",
 							"properties": {
-								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
-								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
-								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+								"userAccount": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
+										{ "type": "null" }
+									]
+								},
+								"address": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+										{ "type": "null" }
+									]
+								},
+								"telephone": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+										{ "type": "null" }
+									]
+								},
 								"isLead": { "type": "boolean" },
-								"userClassification": { "type": "string" },
-								"dateRegistered": { "type": "string", "format": "date-time" }
+								"userClassification": { "type": [ "string", "null" ] },
+								"dateRegistered": { "type": [ "string", "null" ], "format": "date-time" }
 							}
 						}
 					}
@@ -141,9 +172,10 @@
 							"type": "object",
 							"properties": {
 								"anonymousId": { "type": "string" },
-								"browserUA":   { "type": "string" },
+								"browserUA":   { "type": [ "string", "null" ] },
 								"sessionId":   { "type": "string" }
-							}
+							},
+							"required": [ "anonymousId", "sessionId" ]
 						}
 					}
 				}
@@ -160,7 +192,12 @@
 						"data": {
 							"type": "object",
 							"properties": {
-								"form": { "$ref": "https://cdn.brytecore.com/packages/schemas/form.json#" }
+								"form": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/form.json#" },
+										{ "type": "null" }
+									]
+								}
 							}
 						}
 					}
@@ -179,8 +216,18 @@
 							"type": "object",
 							"properties": {
 								"userAccount": { "$ref": "https://cdn.brytecore.com/packages/schemas/userAccount.json#" },
-								"address": { "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
-								"telephone": { "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" }
+								"address": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/address.json#" },
+										{ "type": "null" }
+									]
+								},
+								"telephone": {
+									"oneOf": [
+										{ "$ref": "https://cdn.brytecore.com/packages/schemas/telephone.json#" },
+										{ "type": "null" }
+									]
+								}
 							}
 						}
 					}

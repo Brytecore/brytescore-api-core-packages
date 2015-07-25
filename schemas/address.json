@@ -4,11 +4,11 @@
 	"description": "A mailing address",
 	"type": "object",
 	"properties": {
-		"streetAddress": {"type": "string"},
-		"streetAddress2": {"type": "string"},
-		"city": {"type": "string"},
-		"county": {"type": "string"},
-		"stateProvince": {"type": "string"},
-		"postalCode": {"type": "string"}
+		"streetAddress": { "type": [ "string", "null" ] },
+		"streetAddress2": { "type": [ "string", "null" ] },
+		"city": { "type": [ "string", "null" ] },
+		"county": { "type": [ "string", "null" ] },
+		"stateProvince": { "type": [ "string", "null" ] },
+		"postalCode": { "type": [ "string", "null" ] }
 	}
 }

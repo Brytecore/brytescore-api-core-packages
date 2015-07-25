@@ -4,7 +4,7 @@
 	"description": "A human being",
 	"type": "object",
 	"properties": {
-		"firstName": {"type": "string"},
-		"lastName": {"type": "string"}
+		"firstName": { "type": [ "string", "null" ] },
+		"lastName": { "type": [ "string", "null" ] }
 	}
 }
