@@ -15,6 +15,7 @@
 					},
 					"additionalProperties": true
 				},
+				"date": { "type": "string", "format": "date-time" },
 				"event": { "type": "string" },
 				"eventDisplayName": { "type": [ "string", "null" ] },
 				"hostName": { "type": [ "string", "null" ], "format": "hostname" },
