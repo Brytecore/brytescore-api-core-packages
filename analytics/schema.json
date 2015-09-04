@@ -18,7 +18,14 @@
 				"date": { "type": "string", "format": "date-time" },
 				"event": { "type": "string" },
 				"eventDisplayName": { "type": [ "string", "null" ] },
-				"hostName": { "type": [ "string", "null" ], "format": "hostname" },
+				"hostName": {
+					"oneOf": [
+						{ "type": "null" },
+						{ "type": "string", "format": "hostname" },
+						{ "type": "string", "format": "ipv4" },
+						{ "type": "string", "format": "ipv6" }
+					]
+				},
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
