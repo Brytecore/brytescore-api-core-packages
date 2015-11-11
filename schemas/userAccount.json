@@ -8,7 +8,7 @@
 		{
 			"properties": {
 				"id": { "type": [ "string", "null" ] },
-				"emailAddress": { "type": [ "string", "null" ], "format": "email" }
+				"emailAddress": { "type": [ "string", "null" ] }
 			}
 		}
 	]
