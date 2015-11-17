@@ -26,6 +26,13 @@
 						{ "type": "string", "format": "ipv6" }
 					]
 				},
+				"ipAddress": {
+					"oneOf": [
+						{ "type": "null" },
+						{ "type": "string", "format": "ipv4" },
+						{ "type": "string", "format": "ipv6" }
+					]
+				},
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
