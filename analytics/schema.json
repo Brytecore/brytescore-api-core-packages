@@ -26,6 +26,7 @@
 						{ "type": "string", "format": "ipv6" }
 					]
 				},
+				"impersonatorUserId": { "type": [ "string", "null" ] },
 				"ipAddress": {
 					"oneOf": [
 						{ "type": "null" },
@@ -33,6 +34,7 @@
 						{ "type": "string", "format": "ipv6" }
 					]
 				},
+				"isImpersonating": { "type": [ "boolean", "null" ] },
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
