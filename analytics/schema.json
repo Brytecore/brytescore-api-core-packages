@@ -94,10 +94,12 @@
 						"event": { "enum": [ "brytescoreUUIDCreated" ] },
 						"data": {
 							"type": "object",
-							"anonymousId": { "type": "string" }
+							"properties": {
+								"anonymousId": { "type": "string" }
+							},
+							"required": [ "anonymousId" ]
 						}
-					},
-					"required": [ "anonymousId" ]
+					}
 				}
 			]
 		},
@@ -114,6 +116,26 @@
 							"properties": {
 								"elapsedTime": { "type": "number" }
 							}
+						}
+					}
+				}
+			]
+		},
+		"impersonate": {
+			"description": "",
+			"type": "object",
+			"allOf": [
+				{ "$ref": "#/definitions/eventProperties" },
+				{
+					"properties": {
+						"event": { "enum": [ "impersonate" ] },
+						"data": {
+							"type": "object",
+							"properties": {
+								"isImpersonating": { "type": "boolean" },
+								"impersonatorUserId": { "type": "string" }
+							},
+							"required": [ "isImpersonating" ]
 						}
 					}
 				}
@@ -257,6 +279,7 @@
 		{ "$ref": "#/definitions/authenticated" },
 		{ "$ref": "#/definitions/brytescoreUUIDCreated" },
 		{ "$ref": "#/definitions/heartBeat" },
+		{ "$ref": "#/definitions/impersonate" },
 		{ "$ref": "#/definitions/pageView" },
 		{ "$ref": "#/definitions/registeredAccount" },
 		{ "$ref": "#/definitions/sessionStarted" },
