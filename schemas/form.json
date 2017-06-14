@@ -4,7 +4,12 @@
 	"description": "A user-submitted data entry form",
 	"type": "object",
 	"properties": {
-		"fromEmail": { "type": [ "string", "null" ], "format": "email" },
+		"fromEmail": {
+			"oneOf": [
+				{ "type": [ "string", "null" ], "format": "email" },
+				{ "enum": [ "" ] }
+			]
+		},
 		"fromName": { "type": [ "string", "null" ] },
 		"fromTelephone": {
 			"oneOf": [
@@ -15,7 +20,12 @@
 		"message": { "type": [ "string", "null" ] },
 		"name": { "type": [ "string", "null" ] },
 		"subject": { "type": [ "string", "null" ] },
-		"toEmail":   { "type": [ "string", "null" ], "format": "email" },
+		"toEmail": {
+			"oneOf": [
+				{ "type": [ "string", "null" ], "format": "email" },
+				{ "enum": [ "" ] }
+			]
+		},
 		"toName": { "type": [ "string", "null" ] }
 	}
 }
