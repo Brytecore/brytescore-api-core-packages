@@ -38,8 +38,10 @@
 				"library": { "type": "string" },
 				"libraryVersion": { "type": "string" },
 				"pageViewId": { "type": "string" },
+				"referer": { "type": "string", "format": "uri"},
 				"schemaVersion": { "type": "string" },
 				"sessionId": { "type": "string" },
+				"userAgent": { "type": "string" },
 				"userId": { "type": [ "string", "null" ] }
 			},
 			"required": [ "anonymousId", "apiKey", "data", "event", "library", "libraryVersion", "schemaVersion" ],
