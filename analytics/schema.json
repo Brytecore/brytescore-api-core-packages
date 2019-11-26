@@ -16,6 +16,7 @@
 					"additionalProperties": true
 				},
 				"date": { "type": "string", "format": "date-time" },
+				"receivedDate": { "type": "string", "format": "date-time" },
 				"event": { "type": "string" },
 				"eventDisplayName": { "type": [ "string", "null" ] },
 				"hostName": {
