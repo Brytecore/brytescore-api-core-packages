@@ -45,7 +45,7 @@
 				"userAgent": { "type": "string" },
 				"userId": { "type": [ "string", "null" ] }
 			},
-			"required": [ "anonymousId", "apiKey", "data", "event", "library", "libraryVersion", "schemaVersion" ],
+			"required": [ "anonymousId", "apiKey", "data", "event" ],
 			"additionalProperties": false
 		},
 
